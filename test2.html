@@ -10,5 +10,26 @@
 	<div ng-controller="firstController"> 
 		{{ message}}
 	</div>
+
+	<div ng-controller="dataController">
+		<table style="width:500px; border:2px solid black;">
+			<thead>
+				<tr style="text-align: left;">
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Gender</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat ="employee in employees">
+					<td>{{ employee.firstName }}</td>
+					<td>{{ employee.lastName }}</td>
+					<td>{{ employee.gender }}</td>
+					<td>{{ employee.salary }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
